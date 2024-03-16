@@ -1,0 +1,65 @@
+:root {
+  --header-offset: 13px;
+  --header-element-size: 49px;
+  --header-element-radius: 15px;
+  --header-gap: var(--header-offset);
+
+  --bg-color: #e1e1e1;
+  --white-color: #fff;
+
+  --draw-panel-width: 38px;
+  --draw-panel-height: 335px;
+  --draw-panel-offset: var(--header-offset);
+  --draw-panel-radius: 100px;
+
+  --hide-button-width: 28px;
+  --hide-button-height: 30px;
+  --hide-button-radius: var(--draw-panel-radius);
+}
+body {
+  background: var(--bg-color);
+  overflow-y: hidden;
+}
+.header {
+  margin: var(--header-offset);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--header-gap);
+}
+.header div {
+  height: var(--header-element-size);
+  background: var(--white-color);
+  border-radius: var(--header-element-radius);
+}
+.header__func-button {
+  width: var(--header-element-size);
+}
+.header__navigation {
+  flex: 1;
+}
+.canvas__wrapper {
+  position: relative;
+}
+.draw-panel {
+  position: absolute;
+  top: 50%;
+  right: var(--draw-panel-offset);
+  transform: translate(0, -50%);
+  background: var(--white-color);
+  width: var(--draw-panel-width);
+  height: var(--draw-panel-height);
+  border-radius: var(--draw-panel-radius);
+}
+.draw-panel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(var(--draw-panel-offset) + var(--draw-panel-width)/4);
+  transform: translate(0, -50%);
+  width: var(--hide-button-width);
+  height: var(--hide-button-height);
+  background: var(--white-color);
+  border-top-left-radius: var(--hide-button-radius);
+  border-bottom-left-radius: var(--hide-button-radius);
+}
