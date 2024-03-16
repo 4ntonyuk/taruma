@@ -13,7 +13,7 @@
   --draw-panel-radius: 100px;
 
   --hide-button-width: 30px;
-  --hide-button-height: 50px;
+  --hide-button-height: 38px;
   --hide-button-radius: var(--draw-panel-radius);
 }
 body {
