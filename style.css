@@ -12,8 +12,8 @@
   --draw-panel-offset: var(--header-offset);
   --draw-panel-radius: 100px;
 
-  --hide-button-width: 28px;
-  --hide-button-height: 30px;
+  --hide-button-width: 30px;
+  --hide-button-height: 50px;
   --hide-button-radius: var(--draw-panel-radius);
 }
 body {
